@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IKO Belém</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .sidebar-socials {
+            margin-top: 25px;
+            display: flex;
+            gap: 15px;
+            padding: 0 5px;
+        }
+        .sidebar-socials a {
+            color: #ffffff;
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+        .sidebar-socials a:hover {
+            color: white; 
+        }
+        .mobile-socials {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+            padding-bottom: 20px;
+        }
+        .mobile-socials a {
+            color: #ffffff;
+            font-size: 1.6rem;
+            transition: color 0.3s ease;
+        }
+        .mobile-socials a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+
+            <nav class="sidebar-nav">
+                <a href="#home">Home</a>
+                <a href="ondecomer.html">Onde comer?</a>
+                <a href="ondepraticaresportes.html">Onde praticar esportes?</a>
+                <a href="oquefazer.html">O que fazer?</a>
+                <a href="ondeestudar.html">Onde estudar?</a>
+                <a href="ondecomprar.html">Onde comprar?</a>
+                <a href="utilidade.html">Utilidade</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="about.html">Sobre nós</a>
+                <a href="contato.html">Fale conosco</a>
+                
+                <div class="sidebar-socials">
+                    <a href="https://www.instagram.com/iko.belem/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </nav>
+
+        </div>
+
+        <div class="sidebar-bottom">
+            <span>© 2026 IKO. Desenvolvido pela <strong>Lucas Gusmão Dev</strong>.</span>
+        </div>
+
+    </aside>
+
+    <header class="mobile-header">
+
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+
+    </header>
+
+    <div class="mobile-menu">
+
+        <a href="#">Home</a>
+        <a href="ondecomer.html">Onde comer?</a>
+        <a href="ondepraticaresportes.html">Onde praticar esportes?</a>
+        <a href="oquefazer.html">O que fazer?</a>
+        <a href="ondeestudar.html">Onde estudar?</a>
+        <a href="ondecomprar.html">Onde comprar?</a>
+        <a href="utilidade.html">Utilidade</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="about.html">Sobre nós</a>
+        <a href="contato.html">Fale conosco</a>
+        
+        <div class="mobile-socials">
+            <a href="https://www.instagram.com/iko.belem/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+
+    </div>
+
+    <main class="slider-wrapper">
+
+        <div class="slider">
+
+            <section class="slide active">
+
+                <img src="belem1.jpeg">
+
+                <div class="slide-content">
+
+                    <span class="slide-tag">
+                        EXPLORE A CIDADE
+                    </span>
+
+                    <h1>
+                        Descubra lugares, cultura e experiências em Belém.
+                    </h1>
+
+                    <p>
+                        Pontos turísticos, cultura e experiências imperdíveis para você aproveitar a cidade ao máximo.
+                    </p>
+
+                    <a href="oquefazer.html" class="btn">
+                        O que fazer?
+                    </a>
+
+                </div>
+
+            </section>
+
+            <section class="slide">
+
+                <img src="belem1.jpeg">
+
+                <div class="slide-content">
+
+                    <span class="slide-tag">
+                        A CIDADE
+                    </span>
+
+                    <h1>
+                        Belém em cada detalhe
+                    </h1>
+
+                    <p>
+                        Um olhar visual pelas belezas, cores e enquantos que fazem a nossa capital ser única.
+                    </p>
+
+                    <a href="galeria.html" class="btn">
+                        Ver Galeria
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <div class="slider-controls">
+
+            <button class="prev">
+                ←
+            </button>
+
+            <button class="next">
+                →
+            </button>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
