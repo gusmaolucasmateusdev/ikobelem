@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Nome Restaurante</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+<style>
+
+
+/* ==========================
+        RESET
+========================== */
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+    background:#f7f4ef;
+
+    color:#111;
+
+    overflow-x:hidden;
+
+    font-family:'Montserrat',sans-serif;
+
+}
+
+
+
+
+
+/* ==========================
+        HERO
+========================== */
+
+
+.hero{
+
+
+    width:100%;
+
+
+    height:60vh;
+
+
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,.50),
+        rgba(0,0,0,.50)
+    ),
+
+    url("imagens/restaurante-hero.jpg");
+
+
+
+    background-size:cover;
+
+
+    background-position:center;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+
+    text-align:center;
+
+
+
+}
+
+
+
+.hero-content{
+
+
+    width:90%;
+
+    max-width:900px;
+
+
+}
+
+
+
+.hero-content h1{
+
+
+    font-family:'Cormorant Garamond',serif;
+
+
+    font-size:82px;
+
+
+    font-weight:300;
+
+
+    color:#fff;
+
+
+    letter-spacing:2px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.hero-content p{
+
+
+    color:#ddd;
+
+
+    font-size:12px;
+
+
+    letter-spacing:5px;
+
+
+    text-transform:uppercase;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+        CONTAINER
+========================== */
+
+
+.restaurant-section{
+
+
+    width:100%;
+
+
+    max-width:1200px;
+
+
+    margin:auto;
+
+
+    padding:100px 6%;
+
+
+}
+
+
+
+
+
+/* ==========================
+        INTRO
+========================== */
+
+
+.section-tag{
+
+
+    color:#a58f72;
+
+
+    font-size:12px;
+
+
+    letter-spacing:5px;
+
+
+    text-transform:uppercase;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.restaurant-title{
+
+
+    font-family:'Cormorant Garamond',serif;
+
+
+    font-size:70px;
+
+
+    font-weight:300;
+
+
+    line-height:1.1;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+.restaurant-description{
+
+
+    max-width:800px;
+
+
+    color:#666;
+
+
+    line-height:2;
+
+
+    font-size:15px;
+
+
+    margin-bottom:70px;
+
+
+}
+
+
+
+
+
+/* ==========================
+        INFORMATION
+========================== */
+
+
+.info-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(2,1fr);
+
+
+    gap:40px;
+
+
+    margin-bottom:80px;
+
+
+}
+
+
+
+.info-box{
+
+
+    border-top:1px solid rgba(0,0,0,.15);
+
+
+    padding-top:25px;
+
+
+}
+
+
+
+.info-box h3{
+
+
+    font-family:'Cormorant Garamond',serif;
+
+
+    font-size:32px;
+
+
+    font-weight:400;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.info-box p{
+
+
+    color:#666;
+
+
+    line-height:2;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+
+/* ==========================
+        BUTTON
+========================== */
+
+
+.main-btn{
+
+
+    display:inline-block;
+
+
+    padding:15px 45px;
+
+
+    border:1px solid #111;
+
+
+    color:#111;
+
+
+    text-decoration:none;
+
+
+    letter-spacing:3px;
+
+
+    font-size:12px;
+
+
+    transition:.35s;
+
+
+}
+
+
+
+.main-btn:hover{
+
+
+    background:#111;
+
+
+    color:#fff;
+
+
+}
+
+
+
+
+
+
+/* RESPONSIVO */
+
+
+@media(max-width:800px){
+
+
+.hero{
+
+
+    height:45vh;
+
+
+}
+
+
+
+.hero-content h1{
+
+
+    font-size:52px;
+
+
+}
+
+
+
+.restaurant-title{
+
+
+    font-size:46px;
+
+
+}
+
+
+
+.info-grid{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+}
+
+ 
+/* ==========================
+        GALERIA
+========================== */
+
+
+.gallery{
+
+
+    width:100%;
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(3,1fr);
+
+
+    gap:25px;
+
+
+    margin-top:30px;
+
+
+    margin-bottom:80px;
+
+
+}
+
+
+
+.gallery img{
+
+
+    width:100%;
+
+
+    height:320px;
+
+
+    object-fit:cover;
+
+
+    transition:.6s;
+
+
+    border-radius:3px;
+
+
+}
+
+
+
+.gallery img:hover{
+
+
+    transform:scale(1.04);
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+        MAPA
+========================== */
+
+
+.map{
+
+
+    width:100%;
+
+
+    height:500px;
+
+
+    overflow:hidden;
+
+
+    margin-top:30px;
+
+
+    margin-bottom:80px;
+
+
+}
+
+
+
+
+.map iframe{
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    border:0;
+
+
+    filter:grayscale(100%) contrast(95%);
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+        MELHORIAS VISUAIS
+========================== */
+
+
+.restaurant-section .info-box + .info-box{
+
+
+    margin-top:10px;
+
+
+}
+
+
+
+.info-box strong{
+
+
+    color:#111;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+
+
+
+/* ==========================
+        TABLET
+========================== */
+
+
+@media(max-width:900px){
+
+
+
+.gallery{
+
+
+    grid-template-columns:repeat(2,1fr);
+
+
+}
+
+
+
+.map{
+
+
+    height:400px;
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+        CELULAR
+========================== */
+
+
+@media(max-width:600px){
+
+
+
+.restaurant-section{
+
+
+    padding:70px 7%;
+
+
+}
+
+
+
+.restaurant-description{
+
+
+    font-size:14px;
+
+
+}
+
+
+
+.gallery{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.gallery img{
+
+
+    height:260px;
+
+
+}
+
+
+
+.main-btn{
+
+
+    width:100%;
+
+
+    text-align:center;
+
+
+}
+
+
+
+}
+
+</style>
+
+
+</head>
+<body>
+
+
+<!-- ==========================
+        HERO
+========================== -->
+
+
+<section class="hero">
+
+
+    <div class="hero-content">
+
+
+        <h1>
+            Nome do Restaurante
+        </h1>
+
+
+        <p>
+            SLOGAN
+        </p>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================
+        CONTEÚDO PRINCIPAL
+========================== -->
+
+
+<section class="restaurant-section">
+
+
+
+    <span class="section-tag">
+        Categoria
+    </span>
+
+
+
+    <h2 class="restaurant-title">
+
+        Nome do Restaurante
+
+    </h2>
+
+
+
+
+    <p class="restaurant-description">
+
+        Um ambiente especial em Belém, com gastronomia,
+        conforto e uma experiência única para quem deseja
+        aproveitar bons momentos, sabores marcantes e
+        atendimento de qualidade.
+
+    </p>
+
+
+
+
+
+
+<!-- ==========================
+        INFORMAÇÕES
+========================== -->
+
+
+<div class="info-grid">
+
+<div class="info-box">
+
+
+    <h3>
+        Endereço
+    </h3>
+
+
+    <p>
+
+        Av. 00000 - 0000, Belém - PA, 00000-000
+
+    </p>
+
+
+    <br>
+
+
+</div>
+
+
+<div class="info-box">
+
+
+    <h3>
+        Redes sociais
+    </h3>
+
+
+    <p>
+
+        Acompanhe novidades,
+        pratos especiais e experiências
+        do restaurante.
+
+    </p>
+
+
+    <br>
+
+
+    <a href="https://instagram.com/nomedorestaurante"
+    class="main-btn"
+    target="_blank">
+
+        INSTAGRAM
+
+    </a>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+<!-- ==========================
+        CARDÁPIO
+========================== -->
+
+
+<div class="info-box">
+
+
+<h3>
+    Cardápio
+</h3>
+
+
+<p>
+
+Confira nosso cardápio completo
+com pratos, bebidas e valores.
+
+</p>
+
+
+<br>
+
+
+<a href="cardapio.pdf"
+class="main-btn"
+target="_blank">
+
+VER CARDÁPIO
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ==========================
+        GALERIA
+========================== -->
+
+
+<br><br><br>
+
+
+<div class="info-box">
+
+
+<h3>
+    Ambiente
+</h3>
+
+
+</div>
+
+
+
+<div class="gallery">
+
+
+
+    <img src="imagens/restaurante1.jpg"
+    alt="Ambiente do restaurante">
+
+
+
+    <img src="imagens/restaurante2.jpg"
+    alt="Ambiente interno">
+
+
+
+    <img src="imagens/restaurante3.jpg"
+    alt="Área externa">
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ==========================
+        LOCALIZAÇÃO
+========================== -->
+
+
+<br><br><br>
+
+
+
+<div class="info-box">
+
+
+<h3>
+    Localização
+</h3>
+
+
+</div>
+
+
+
+<div class="map">
+
+
+<iframe
+
+src="https://www.google.com/maps/embed"
+
+loading="lazy">
+
+</iframe>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ==========================
+        VOLTAR
+========================== -->
+
+
+<div style="text-align:center;">
+
+
+<a href="ondecomer.html"
+class="main-btn">
+
+VOLTAR
+
+</a>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+</body>
+
+</html>
