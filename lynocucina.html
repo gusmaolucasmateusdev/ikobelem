@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Lyno Cucina</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+    background:#f7f4ef;
+    color:#111;
+    overflow-x:hidden;
+    font-family:'Montserrat',sans-serif;
+
+}
+
+.hero{
+
+    width:100%;
+    height:40vh;
+    background: #f7f4ef;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding-top: 50px;
+
+}
+
+.hero-content{
+
+    width:90%;
+    max-width:900px;
+
+}
+
+.hero-content h1{
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:72px;
+    font-weight:400;
+    color:#111;
+    letter-spacing:2px;
+    margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+    color:#a58f72;
+    font-size:12px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+
+}
+
+
+.restaurant-section{
+
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    padding:50px 6% 100px 6%;
+
+}
+
+.section-tag{
+
+    color:#a58f72;
+    font-size:12px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+
+}
+
+.restaurant-title{
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:70px;
+    font-weight:300;
+    line-height:1.1;
+    margin-bottom:30px;
+
+}
+
+.restaurant-description{
+
+    max-width:800px;
+    color: #666;
+    line-height:2;
+    font-size:15px;
+    margin-bottom:70px;
+
+}
+
+.info-grid{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+    margin-bottom:80px;
+
+}
+
+.info-box{
+
+    border-top:1px solid rgba(0,0,0,.15);
+    padding-top:25px;
+
+}
+
+.info-box h3{
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:32px;
+    font-weight:400;
+    margin-bottom:15px;
+
+}
+
+.info-box p{
+
+    color:#666;
+    line-height:2;
+    font-size:14px;
+
+}
+
+.main-btn{
+
+    display:inline-block;
+    padding:15px 45px;
+    border:1px solid #111;
+    color:#111;
+    text-decoration:none;
+    letter-spacing:3px;
+    font-size:12px;
+    transition:.35s;
+
+}
+
+.main-btn:hover{
+
+    background:#111;
+    color:#fff;
+
+}
+
+@media(max-width:800px){
+
+.hero{
+
+    height:30vh;
+
+}
+
+.hero-content h1{
+
+    font-size:48px;
+
+}
+
+.restaurant-title{
+
+    font-size:46px;
+
+}
+
+.info-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+.gallery{
+
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:30px;
+    margin-bottom:80px;
+    align-items: center;
+
+}
+
+.gallery img{
+
+    width:100%;
+    height: auto; /* Mantém a proporção original da imagem sem cortar */
+    object-fit: contain; /* Garante que a imagem inteira apareça */
+    transition:.6s;
+    border-radius:3px;
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.04);
+
+}
+
+.map{
+
+    width:100%;
+    height:500px;
+    overflow:hidden;
+    margin-top:30px;
+    margin-bottom:80px;
+
+}
+
+.map iframe{
+
+    width:100%;
+    height:100%;
+    border:0;
+    filter:grayscale(100%) contrast(95%);
+
+}
+
+.restaurant-section .info-box + .info-box{
+
+    margin-top:10px;
+
+}
+
+.info-box strong{
+
+    color:#111;
+    font-weight:600;
+
+}
+
+@media(max-width:900px){
+
+.gallery{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.map{
+
+    height:400px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.restaurant-section{
+
+    padding:50px 7%;
+
+}
+
+.restaurant-description{
+
+    font-size:14px;
+
+}
+
+.gallery{
+
+    grid-template-columns:1fr;
+
+}
+
+.main-btn{
+
+    width:100%;
+    text-align:center;
+
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<section class="restaurant-section">
+
+    <span class="section-tag">
+        RESTAURANTE ITALIANO 
+    </span>
+
+    <h2 class="restaurant-title">
+
+        Lyno Cucina
+
+    </h2>
+
+    <p class="restaurant-description">
+
+        Um ambiente especial em Belém, com gastronomia,
+        conforto e uma experiência única para quem deseja
+        aproveitar bons momentos, sabores marcantes e
+        atendimento de qualidade.
+
+    </p>
+
+<br><br><br>
+
+<div class="info-box">
+
+<h3>
+    Ambiente
+</h3>
+
+</div>
+
+<div class="gallery">
+
+    <img src=""
+    alt="Ambiente do restaurante">
+
+    
+
+</div>
+
+<div class="info-grid">
+
+<div class="info-box">
+
+    <h3>
+        Endereço
+    </h3>
+
+    <p>
+
+        Tv. Alm. Wandenkolk, 346 - Umarizal, Belém - PA, 66055-030
+
+    </p>
+
+    <br>
+
+</div>
+
+<div class="info-box">
+
+    <h3>
+        Redes sociais
+    </h3>
+
+    <p>
+
+        Acompanhe novidades,
+        pratos especiais e experiências
+        do restaurante.
+
+    </p>
+
+    <br>
+
+    <a href="https://www.instagram.com/lynocucina/"
+    class="main-btn"
+    target="_blank">
+
+        INSTAGRAM
+
+    </a>
+
+</div>
+
+</div>
+
+<div class="info-box">
+
+<h3>
+    Cardápio
+</h3>
+
+<p>
+
+Confira nosso cardápio completo
+com pratos, bebidas e valores.
+
+</p>
+
+<br>
+
+<a href="cardapio.pdf"
+class="main-btn"
+target="_blank">
+
+VER CARDÁPIO
+
+</a>
+
+</div>
+
+<br><br><br>
+
+<div class="info-box">
+
+<h3>
+    Localização
+</h3>
+
+</div>
+
+<div class="map">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.5545343649997!2d-48.490880926024865!3d-1.4421462358142363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48f97575f4b59%3A0x607583ddbdfcd834!2sLYNO%20CUCINA!5e0!3m2!1spt-BR!2sbr!4v1787523206397!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+</div>
+
+<div style="text-align:center;">
+
+<a href="ondecomer.html"
+class="main-btn">
+
+VOLTAR
+
+</a>
+
+</div>
+
+</section>
+
+</body>
+
+</html>
